@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>아이코젠</title>
+  <link rel="icon" type="image/x-icon" href="./images/logo/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+  <header class="site-header">
+
+    <div class="header-inner">
+
+
+      <!-- 아이코젠 로고 -->
+      <a href="./index.html" class="site-logo" aria-label="아이코젠 홈">
+        <img src="./images/logo/logo-header.png" alt="아이코젠">
+      </a>
+
+
+      <!-- =========================
+           PC NAVIGATION
+      ========================= -->
+      <nav class="desktop-nav" aria-label="주 메뉴">
+
+        <!-- 상단 대메뉴 -->
+        <ul class="nav-list">
+          <li><a href="#">서비스</a></li>
+          <li><a href="#">제휴서비스</a></li>
+          <li><a href="#">제휴문의</a></li>
+          <li><a href="#">회원혜택</a></li>
+          <li><a href="#">마이페이지</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+
+        <!-- PC 전체 드롭다운 메뉴 -->
+        <div class="mega-menu" id="megaMenu">
+
+          <div class="mega-menu-inner">
+
+            <!-- 1열: 서비스 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/intro/howtofirst.html">서비스소개</a>
+              <a href="https://www.ikozen.com/intro/membership_intro.html">멤버십소개</a>
+              <a href="https://www.ikozen.com/intro/useapply.html">이용신청</a>
+            </div>
+
+            <!-- 2열: 제휴서비스 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/center/center_list.html">주변시설</a>
+              <a href="https://www.ikozen.com/center/center_search.html">시설검색</a>
+              <a href="https://www.ikozen.com/life/life_list.html">라이프</a>
+              <a href="https://www.ikozen.com/center/fav_center.html">즐겨찾기</a>
+            </div>
+
+            <!-- 3열: 제휴문의 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/board/jehyu.html?s_kind=1">회원추천시설</a>
+              <a href="https://www.ikozen.com/board/jehyu.html?s_kind=3">회사제휴문의</a>
+              <a href="https://www.ikozen.com/board/jehyu.html?s_kind=2">시설제휴문의</a>
+            </div>
+
+            <!-- 4열: 혜택 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/event/event_list.html">이벤트</a>
+              <a href="https://www.ikozen.com/event/clip_list.html">코젠컬처</a>
+              <a href="https://www.ikozen.com/event/boon_list.html">코젠플레이</a>
+            </div>
+
+            <!-- 5열: 마이페이지 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/mypage/memberinfo.html">회원정보변경</a>
+              <a href="https://www.ikozen.com/mypage/membership.html">멤버십관리</a>
+              <a href="https://www.ikozen.com/mypage/uselist.html">내역조회</a>
+              <a href="https://www.ikozen.com/mypage/cpnlist.html">쿠폰함</a>
+              <a href="https://www.ikozen.com/mypage/mileage.html">캐시백</a>
+              <a href="https://www.ikozen.com/mypage/coin.html">아이코인</a>
+              <a href="https://www.ikozen.com/mypage/setting.html">기타설정</a>
+            </div>
+
+            <!-- 6열: 고객센터 -->
+            <div class="mega-column">
+              <a href="https://www.ikozen.com/board/notice_list.html">공지사항</a>
+              <a href="https://www.ikozen.com/board/qna_list.html">1:1문의</a>
+              <a href="https://www.ikozen.com/board/faq_list.html">자주하는질문</a>
+            </div>
+
+          </div>
+        </div>
+
+      </nav>
+
+      <!-- 로그아웃 상태 - PC / 개발팀 회원정보 연동 필요 -->
+      <div class="desktop-account">
+        <a href="https://www.ikozen.com/member/login.html" class="login-btn">로그인</a>
+        <a href="https://www.ikozen.com/member/join_step1.html" class="join-btn">회원가입</a>
+      </div>
+
+      <!-- 로그인 상태 - PC / 개발팀 회원정보 연동 필요
+      <div class="desktop-member">
+
+        <a href="https://www.ikozen.com/mypage/memberinfo.html" class="desktop-member-name">
+          코제니 님
+        </a>
+
+        <a href="https://www.ikozen.com/mypage/membership.html" class="desktop-member-type">
+          스포츠(50그룹)
+        </a>
+
+        <button type="button" class="desktop-logout-btn" aria-label="로그아웃">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3H4Q2 3 2 5V19Q2 21 4 21H8" />
+            <path d="M9 12H21M16 7L21 12L16 17" />
+          </svg>
+        </button>
+
+      </div>
+       -->
+
+      <!-- =========================
+           MOBILE HEADER ACTIONS
+      ========================= -->
+      <div class="mobile-header-actions">
+
+        <!-- 검색 -->
+        <a href="https://www.ikozen.com/main/search.html" class="mobile-search-btn" aria-label="검색">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="7" />
+            <path d="M16 16L22 22" />
+          </svg>
+        </a>
+
+        <!-- 로그인 상태 (로그아웃 버튼)
+        <button type="button" class="mobile-logout-btn" aria-label="로그아웃">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16 3H20Q22 3 22 5V19Q22 21 20 21H16" />
+            <path d="M3 12H15M10 7L15 12L10 17" />
+          </svg>
+        </button>
+-->
+
+
+        <!-- 비로그인 상태 -->
+        <a href="https://www.ikozen.com/member/login.html" class="mobile-login-btn" aria-label="로그인">
+          <img src="./images/icons/logo-login.svg" alt="">
+        </a>
+
+        <!-- 전체 메뉴 -->
+        <button type="button" class="mobile-menu-btn" aria-label="전체 메뉴 열기" aria-expanded="false"
+          aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <div class="mega-overlay"></div>
+
+  <!-- =========================
+       MOBILE MENU OVERLAY
+  ========================= -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- =========================
+       MOBILE SIDE MENU
+  ========================= -->
+  <aside class="mobile-menu" id="mobileMenu" aria-label="모바일 전체 메뉴">
+
+
+    <div class="mobile-menu-top">
+      <!-- 로그인 상태 - (회원 정보)
+      <div class="mobile-user">
+        <a href="https://www.ikozen.com/mypage/memberinfo.html">
+          <strong>코제니</strong>
+          <span>(12345678) 님</span>
+        </a>
+      </div>
+
+      <div class="mobile-membership">
+        <a href="https://www.ikozen.com/mypage/membership.html" class="mobile-membership-link">스포츠(50그룹)</a>
+        <span class="mobile-membership-divider">|</span>
+        <a href="https://www.ikozen.com/mypage/coin.html" class="mobile-coin-link">0.0코인</a>
+
+    </div>
+ -->
+
+      <!-- 비로그인 상태 -->
+      <a href="https://www.ikozen.com/member/login.html" class="mobile-guest-link">
+        로그인하세요
+      </a>
+
+      <button type="button" class="mobile-close-btn" aria-label="메뉴 닫기">
+        ×
+      </button>
+
+    </div>
+
+
+
+
+    <!-- 모바일 메뉴 -->
+    <nav class="mobile-nav" aria-label="모바일 주 메뉴">
+
+      <!-- 1. 서비스 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-01" aria-hidden="true"></span>
+            서비스
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/intro/howtofirst.html">서비스소개</a>
+          <a href="https://www.ikozen.com/intro/membership_intro.html">멤버십소개</a>
+          <a href="https://www.ikozen.com/intro/useapply.html">이용신청</a>
+        </div>
+      </div>
+
+      <!-- 2. 제휴서비스 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-02" aria-hidden="true"></span>
+            제휴서비스
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/center/center_list.html">주변시설</a>
+          <a href="https://www.ikozen.com/center/center_search.html">시설검색</a>
+          <a href="https://www.ikozen.com/life/life_list.html">라이프</a>
+          <a href="https://www.ikozen.com/center/fav_center.html">즐겨찾기</a>
+        </div>
+      </div>
+
+      <!-- 3. 제휴문의 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-03" aria-hidden="true"></span>
+            제휴문의
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/board/jehyu.html?s_kind=1">회원추천시설</a>
+          <a href="https://www.ikozen.com/board/jehyu.html?s_kind=3">회사제휴문의</a>
+          <a href="https://www.ikozen.com/board/jehyu.html?s_kind=2">시설제휴문의</a>
+        </div>
+      </div>
+
+      <!-- 4. 혜택 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-04" aria-hidden="true"></span>
+            회원혜택
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/event/event_list.html">이벤트</a>
+          <a href="https://www.ikozen.com/event/clip_list.html">코젠컬처</a>
+          <a href="https://www.ikozen.com/event/boon_list.html">코젠플레이</a>
+        </div>
+      </div>
+
+      <!-- 5. 마이페이지 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-05" aria-hidden="true"></span>
+            마이페이지
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/mypage/memberinfo.html">회원정보변경</a>
+          <a href="https://www.ikozen.com/mypage/membership.html">멤버십관리</a>
+          <a href="https://www.ikozen.com/mypage/uselist.html">내역조회</a>
+          <a href="https://www.ikozen.com/mypage/cpnlist.html">쿠폰함</a>
+          <a href="https://www.ikozen.com/mypage/mileage.html">캐시백</a>
+          <a href="https://www.ikozen.com/mypage/coin.html">아이코인</a>
+          <a href="https://www.ikozen.com/mypage/setting.html">기타설정</a>
+        </div>
+      </div>
+
+      <!-- 6. 고객센터 -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-nav-title" aria-expanded="false">
+          <span class="menu-name">
+            <span class="menu-icon menu-icon-06" aria-hidden="true"></span>
+            고객센터
+          </span>
+          <span class="arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="mobile-submenu">
+          <a href="https://www.ikozen.com/board/notice_list.html">공지사항</a>
+          <a href="https://www.ikozen.com/board/qna_list.html">1:1문의</a>
+          <a href="https://www.ikozen.com/board/faq_list.html">자주하는질문</a>
+        </div>
+      </div>
+
+    </nav>
+  </aside>
+
+
+  <!-- =========================
+     MAIN CONTENT
+========================= -->
+  <main id="mainContent">
+
+    <!-- 메인 배너 -->
+    <section class="hero" aria-label="메인 배너">
+
+
+      <!-- 메인 배너 슬라이더 -->
+      <div class="hero-slider" id="heroSlider">
+
+        <!-- 슬라이드 1 -->
+        <div class="hero-slide active">
+
+          <!-- PC 배경 + 글씨 -->
+          <div class="hero-pc">
+            <img class="hero-background" src="./images/banner/banner-pc-01.png" alt="">
+            <img class="hero-copy" src="./images/banner/banner-pc-01-1.png"
+              alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+          <!-- 모바일 배너 -->
+          <div class="hero-mobile">
+            <img src="./images/banner/banner-m-01.png" alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+        </div>
+
+        <!-- 슬라이드 2: 동일 이미지 테스트 -->
+        <div class="hero-slide">
+
+          <div class="hero-pc">
+            <img class="hero-background" src="./images/banner/banner-pc-01.png" alt="">
+            <img class="hero-copy" src="./images/banner/banner-pc-01-1.png"
+              alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+          <div class="hero-mobile">
+            <img src="./images/banner/banner-m-01.png" alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+        </div>
+
+        <!-- 슬라이드 3: 동일 이미지 테스트 -->
+        <div class="hero-slide">
+
+          <div class="hero-pc">
+            <img class="hero-background" src="./images/banner/banner-pc-01.png" alt="">
+            <img class="hero-copy" src="./images/banner/banner-pc-01-1.png"
+              alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+          <div class="hero-mobile">
+            <img src="./images/banner/banner-m-01.png" alt="Better Work Life. 건강한 오늘이 더 나은 내일을 만듭니다.">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 페이지 버튼: JavaScript에서 자동 생성 -->
+      <div class="hero-pagination" id="heroPagination"></div>
+
+
+      <!-- PC 검색창 개발팀 연동 필요
+  1. 통합검색 기능 연동
+  2. 검색어 전달 및 검색 결과 페이지 이동
+  3. 검색 버튼 클릭 및 Enter 키 입력 시 검색 실행
+-->
+      <form class="hero-search hero-search-pc" role="search">
+        <div class="hero-search-inner">
+
+          <div class="hero-search-input">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" name="keyword" placeholder="어떤 시설을 찾고 계신가요?" aria-label="시설 검색어">
+          </div>
+
+          <button type="submit" class="hero-search-btn">
+            통합검색
+          </button>
+
+        </div>
+      </form>
+
+    </section>
+
+    <!-- 모바일 검색창 개발팀 연동 필요  -->
+    <div class="mobile-search-area">
+
+      <form class="mobile-hero-search" role="search">
+        <input type="search" name="keyword" placeholder="통합검색" aria-label="시설 검색어">
+
+        <button type="submit" class="mobile-hero-search-btn" aria-label="검색">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="7"></circle>
+            <path d="M16 16L22 22"></path>
+          </svg>
+        </button>
+      </form>
+
+      <!-- 비정회원 상태 (비로그인, 준회원, 탈퇴회원) -->
+      <a href="https://www.ikozen.com/intro/useapply.html" class="mobile-apply-btn">
+        이용신청
+      </a>
+
+      <!-- 정회원 상태 - 개발팀 회원 상태 연동 필요
+<a href="https://www.ikozen.com/center/center_list.html"
+   class="mobile-apply-btn">
+  이용하기
+</a>
+-->
+
+    </div>
+
+
+
+    <!-- =========================
+     QUICK MENU
+========================= -->
+    <section class="quick-menu" aria-label="바로가기 메뉴">
+
+      <!-- PC 퀵메뉴 : 8개 -->
+      <div class="quick-menu-inner quick-menu-pc">
+
+        <a href="https://www.ikozen.com/intro/howtofirst.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-01.png" alt="">
+          </span>
+          <span class="quick-menu-text">서비스소개</span>
+        </a>
+
+        <a href="https://www.ikozen.com/intro/useapply.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-02.png" alt="">
+          </span>
+          <span class="quick-menu-text">이용신청</span>
+        </a>
+
+        <a href="https://www.ikozen.com/main/company_search.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-03.png" alt="">
+          </span>
+          <span class="quick-menu-text">회사검색</span>
+        </a>
+
+        <a href="https://www.ikozen.com/center/center_search.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-04.png" alt="">
+          </span>
+          <span class="quick-menu-text">시설검색</span>
+        </a>
+
+        <a href="https://www.ikozen.com/life/life_list.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-05.png" alt="">
+          </span>
+          <span class="quick-menu-text">라이프</span>
+        </a>
+
+        <a href="https://www.ikozen.com/mypage/coin.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-06.png" alt="">
+          </span>
+          <span class="quick-menu-text">아이코인</span>
+        </a>
+
+        <a href="https://www.ikozen.com/board/jehyu.html?s_kind=1" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-07.png" alt="">
+          </span>
+          <span class="quick-menu-text">제휴문의</span>
+        </a>
+
+        <a href="https://www.ikozen.com/board/faq_list.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/pc/quick-08.png" alt="">
+          </span>
+          <span class="quick-menu-text">자주하는질문</span>
+        </a>
+
+      </div>
+
+      <!-- 모바일 퀵메뉴 : 5개 -->
+      <div class="quick-menu-inner quick-menu-mobile">
+
+        <a href="https://www.ikozen.com/mypage/memberinfo.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/m/quick-01.png" alt="">
+          </span>
+          <span class="quick-menu-text">마이페이지</span>
+        </a>
+
+        <a href="https://www.ikozen.com/board/faq_list.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/m/quick-02.png" alt="">
+          </span>
+          <span class="quick-menu-text">자주하는질문</span>
+        </a>
+
+        <a href="https://www.ikozen.com/life/life_list.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/m/quick-03.png" alt="">
+          </span>
+          <span class="quick-menu-text">라이프</span>
+        </a>
+
+        <a href="https://www.ikozen.com/main/company_search.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/m/quick-04.png" alt="">
+          </span>
+          <span class="quick-menu-text">회사검색</span>
+        </a>
+
+        <a href="https://www.ikozen.com/center/center_search.html" class="quick-menu-item">
+          <span class="quick-menu-circle">
+            <img src="./images/contents/m/quick-05.png" alt="">
+          </span>
+          <span class="quick-menu-text">시설검색</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+     MEMBERSHIP
+========================= -->
+    <section class="membership" aria-labelledby="membershipTitle">
+      <div class="membership-inner">
+
+        <!-- 제목 영역 -->
+        <div class="membership-heading">
+          <span class="membership-label">MEMBERSHIP</span>
+
+          <h2 id="membershipTitle">
+            나에게 맞는 <em>멤버십</em>을 선택하세요
+          </h2>
+
+          <p class="membership-description">
+            운동이 필요하다면 스포츠, 일상의 혜택이 필요하다면 라이프,
+            모두 원한다면 프리미엄, 코인 플러스로 추가 혜택까지 누려보세요.
+          </p>
+        </div>
+
+        <!-- 멤버십 카드 4개 -->
+        <div class="membership-cards">
+
+          <!-- 01. 스포츠 -->
+          <article class="membership-card membership-sport">
+            <div class="membership-card-content">
+
+              <div class="membership-type">
+                <strong>스포츠</strong>
+                <span>SPORT</span>
+              </div>
+
+              <h3>월 19,000원~</h3>
+
+              <p class="membership-subtitle">
+                스포츠 시설 이용
+              </p>
+
+              <!-- PC 혜택 -->
+              <ul class="membership-benefits membership-benefits-pc">
+                <li>19그룹(월 19,000원)부터<br> 150그룹(월 150,000원)까지</li>
+                <li>전국 3,000여 개의 제휴<br> 스포츠시설 이용</li>
+              </ul>
+
+              <!-- 모바일 혜택 -->
+              <p class="membership-benefit-mobile">
+                전국 3,000여 개의 제휴 스포츠시설 이용
+              </p>
+
+            </div>
+
+            <a href="https://www.ikozen.com/intro/membership_intro.html" class="membership-detail">
+              <span class="membership-detail-text">자세히보기</span>
+              <img class="membership-detail-arrow" src="./images/icons/arrow.png" alt="" aria-hidden="true">
+              <span class="sr-only">스포츠 멤버십 자세히보기</span>
+            </a>
+          </article>
+
+
+          <!-- 02. 라이프 -->
+          <article class="membership-card membership-life">
+            <div class="membership-card-content">
+
+              <div class="membership-type">
+                <strong>라이프</strong>
+                <span>LIFE</span>
+              </div>
+
+              <h3>월 5,900원~</h3>
+
+              <p class="membership-subtitle">
+                전국 프랜차이즈 브랜드
+              </p>
+
+              <ul class="membership-benefits membership-benefits-pc">
+                <li>라이프Slim 월 이용 횟수 3회<br> 라이프All 월 이용 횟수 10회</li>
+                <li>전국 50여 개의 프랜차이즈 브랜드<br> 할인 혜택</li>
+              </ul>
+
+              <p class="membership-benefit-mobile">
+                전국 50여 개의 프랜차이즈 브랜드 할인 혜택
+              </p>
+
+            </div>
+
+            <a href="https://www.ikozen.com/intro/membership_intro.html" class="membership-detail">
+              <span class="membership-detail-text">자세히보기</span>
+              <img class="membership-detail-arrow" src="./images/icons/arrow.png" alt="" aria-hidden="true">
+              <span class="sr-only">라이프 멤버십 자세히보기</span>
+            </a>
+          </article>
+
+
+          <!-- 03. 프리미엄 -->
+          <article class="membership-card membership-premium">
+            <div class="membership-card-content">
+
+              <div class="membership-type">
+                <strong>프리미엄</strong>
+                <span>PREMIUM</span>
+              </div>
+
+              <h3 class="membership-premium-price">
+                <span class="premium-pc">스포츠 멤버십<br>+ 14,900원</span>
+                <span class="premium-mobile">스포츠 + 14,900원</span>
+              </h3>
+
+              <p class="membership-subtitle">
+                스포츠+라이프
+              </p>
+
+              <ul class="membership-benefits membership-benefits-pc">
+                <li>스포츠와 라이프 모두 이용 가능</li>
+                <li>라이프 시설은 월 이용 횟수에서 <br>최대 10회 이용 가능</li>
+              </ul>
+
+              <p class="membership-benefit-mobile">
+                스포츠 + 라이프 모두 이용 가능
+              </p>
+
+            </div>
+
+            <a href="https://www.ikozen.com/intro/membership_intro.html" class="membership-detail">
+              <span class="membership-detail-text">자세히보기</span>
+              <img class="membership-detail-arrow" src="./images/icons/arrow.png" alt="" aria-hidden="true">
+              <span class="sr-only">프리미엄 멤버십 자세히보기</span>
+            </a>
+          </article>
+
+
+          <!-- 04. 코인플러스 -->
+          <article class="membership-card membership-coin">
+            <div class="membership-card-content">
+
+              <div class="membership-type">
+                <strong>코인플러스</strong>
+                <span>KOIN+</span>
+              </div>
+
+              <h3>스포츠 + 추가 코인</h3>
+
+              <p class="membership-subtitle">
+                정기 코인 지급
+              </p>
+
+              <ul class="membership-benefits membership-benefits-pc">
+                <li>스포츠 + 아이코인</li>
+                <li>매월 1일에 코인 지급 <br>(3코인, 6코인, 9코인 중 선택)</li>
+                <li>코인 유효기간 : 매월 말일</li>
+              </ul>
+
+              <p class="membership-benefit-mobile">
+                매월 1일에 선택한 개수의 아이코인 지급
+              </p>
+
+            </div>
+
+            <a href="https://www.ikozen.com/intro/membership_intro.html" class="membership-detail">
+              <span class="membership-detail-text">자세히보기</span>
+              <img class="membership-detail-arrow" src="./images/icons/arrow.png" alt="" aria-hidden="true">
+              <span class="sr-only">코인플러스 멤버십 자세히보기</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+     RECOMMEND - 추천시설
+========================= -->
+    <section class="recommend" aria-labelledby="recommendTitle">
+      <div class="recommend-inner">
+
+        <div class="recommend-heading">
+          <div>
+            <span class="recommend-label">RECOMMEND</span>
+            <h2 id="recommendTitle">추천시설</h2>
+            <p>아이코젠이 추천하는 인기 제휴시설을 만나보세요.</p>
+          </div>
+
+          <div class="recommend-controls">
+            <button type="button" class="recommend-prev" aria-label="이전 시설">
+              <span class="recommend-arrow"></span>
+            </button>
+            <button type="button" class="recommend-next" aria-label="다음 시설">
+              <span class="recommend-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="recommend-viewport">
+          <div class="recommend-track">
+
+            <!-- 01 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility01.png">
+                <span class="recommend-category">자유수영</span>
+              </div>
+              <div class="recommend-info">
+                <strong>용인월드수영장</strong>
+                <p>임직원 30그룹 / 가족 40그룹</p>
+              </div>
+            </a>
+
+            <!-- 02 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility02.png">
+                <span class="recommend-category">실외골프</span>
+              </div>
+              <div class="recommend-info">
+                <strong>힐스포파크</strong>
+                <p>임직원 50그룹 / 가족 60그룹</p>
+              </div>
+            </a>
+
+            <!-- 03 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility03.png">
+                <span class="recommend-category">헬스</span>
+              </div>
+              <div class="recommend-info">
+                <strong>영앤짐(망포역점)</strong>
+                <p>임직원 40그룹 / 가족 50그룹</p>
+              </div>
+            </a>
+
+            <!-- 04 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility04.png">
+                <span class="recommend-category">필라테스</span>
+              </div>
+              <div class="recommend-info">
+                <strong>윈드필라테스</strong>
+                <p>임직원 70그룹 / 가족 80그룹</p>
+              </div>
+            </a>
+
+            <!-- 05 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility01.png">
+                <span class="recommend-category">자유수영</span>
+              </div>
+              <div class="recommend-info">
+                <strong>용인월드수영장</strong>
+                <p>임직원 30그룹 / 가족 40그룹</p>
+              </div>
+            </a>
+
+            <!-- 06 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility02.png">
+                <span class="recommend-category">실외골프</span>
+              </div>
+              <div class="recommend-info">
+                <strong>힐스포파크</strong>
+                <p>임직원 50그룹 / 가족 60그룹</p>
+              </div>
+            </a>
+
+            <!-- 07 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility03.png">
+                <span class="recommend-category">헬스</span>
+              </div>
+              <div class="recommend-info">
+                <strong>영앤짐(망포역점)</strong>
+                <p>임직원 40그룹 / 가족 50그룹</p>
+              </div>
+            </a>
+
+            <!-- 08 -->
+            <a href="#" class="recommend-card">
+              <div class="recommend-image">
+                <img src="./images/contents/facility04.png">
+                <span class="recommend-category">필라테스</span>
+              </div>
+              <div class="recommend-info">
+                <strong>윈드필라테스</strong>
+                <p>임직원 70그룹 / 가족 80그룹</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+     PARTNERS - 제휴시설 검색
+========================= -->
+    <section class="partners">
+      <div class="partners-inner">
+
+        <div class="partners-content">
+          <span class="partners-label">PARTNERS</span>
+
+          <h2 class="partners-title">
+            운동부터 영화, 커피까지
+            <span>전국 어디서나</span>
+          </h2>
+
+          <p class="partners-description">
+            가까운 제휴 시설을 검색하고 관심시설로 저장해 보세요.
+          </p>
+
+          <a href="https://www.ikozen.com/center/center_list.html" class="partners-button">
+            주변 시설 찾기
+            <img src="./images/icons/arrow-1.png" alt="" class="partners-button-arrow">
+          </a>
+        </div>
+
+        <!-- PC 전용 카테고리 -->
+        <div class="partners-categories partners-categories-pc">
+          <div class="partners-category">헬스</div>
+          <div class="partners-category">사우나</div>
+          <div class="partners-category">수영</div>
+
+          <div class="partners-category">스크린골프</div>
+          <div class="partners-category">실내골프</div>
+          <div class="partners-category">실외골프</div>
+
+          <div class="partners-category">필라테스</div>
+          <div class="partners-category">요가</div>
+          <div class="partners-category">바레</div>
+
+          <div class="partners-category partners-category-purple">영화</div>
+          <div class="partners-category partners-category-purple">카페</div>
+          <div class="partners-category partners-category-purple">생활</div>
+        </div>
+
+        <!-- 모바일 전용 카테고리 -->
+        <div class="partners-categories partners-categories-mobile">
+          <div class="partners-category">헬스</div>
+          <div class="partners-category">실내/실외골프</div>
+          <div class="partners-category">필라테스</div>
+          <div class="partners-category">수영</div>
+
+          <div class="partners-category">사우나</div>
+          <div class="partners-category">스크린골프</div>
+          <div class="partners-category">카페</div>
+          <div class="partners-category">영화/생활</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     BENEFIT - 회원 혜택
+========================= -->
+    <section class="benefit">
+      <div class="benefit-inner">
+
+        <div class="benefit-heading">
+          <span class="benefit-label">BENEFIT</span>
+          <h2 class="benefit-title">
+            아이코젠 회원만의 <span>혜택</span>
+          </h2>
+        </div>
+
+        <div class="benefit-cards">
+
+          <!-- 이벤트 : PC 전용 -->
+          <a href="https://www.ikozen.com/event/event_list.html" class="benefit-card benefit-event">
+            <div class="benefit-card-content">
+              <h3>이벤트</h3>
+              <p>지금 아이코젠에서 진행하는<br>다양한 이벤트와 할인 소식</p>
+            </div>
+          </a>
+
+          <!-- 코젠 컬처 -->
+          <a href="https://www.ikozen.com/event/clip_list.html" class="benefit-card benefit-culture">
+            <div class="benefit-card-content">
+              <h3>코젠 컬처</h3>
+              <p class="benefit-desc-pc">
+                공연·전시·체험형 테마 콘텐츠<br>
+                아이코젠 특별가로 이용 가능
+              </p>
+              <p class="benefit-desc-mobile">
+                공연·전시·체험형<br>
+                테마 콘텐츠
+              </p>
+            </div>
+          </a>
+
+          <!-- 코젠 플레이 -->
+          <a href="https://www.ikozen.com/event/boon_list.html" class="benefit-card benefit-play">
+            <div class="benefit-card-content">
+              <h3>코젠 플레이</h3>
+              <p class="benefit-desc-pc">
+                테마파크 및 다양한 힐링 시설<br>
+                아이코젠 특별가로 이용 가능
+              </p>
+              <p class="benefit-desc-mobile">
+                테마파크 및<br>
+                다양한 힐링 시설
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     59 PLUS / INVITE
+========================= -->
+    <section class="benefit-extra">
+      <div class="benefit-extra-inner">
+
+        <div class="benefit-banners">
+
+          <!-- 59 PLUS -->
+          <div class="benefit-banner benefit-banner-59">
+
+            <img src="./images/contents/pc/benefit-59plus.png" alt="" class="benefit-banner-object">
+
+            <div class="benefit-banner-content">
+
+              <span class="benefit-banner-label">59 PLUS</span>
+
+              <h2 class="benefit-banner-title">
+                <span class="benefit-banner-green">59세 이상</span> 직장인도<br>
+                계속 함께합니다
+              </h2>
+
+              <!-- PC 설명 -->
+              <p class="benefit-banner-desc benefit-banner-desc-pc">
+                59세 이상 회원이 가입하거나, 기존 회원이 59세가 되면 ‘59플러스’<br>
+                소속으로 자동 등록되며, 원하는 멤버십을 선택하여 정해진 횟수 내에서<br>
+                아이코젠을 계속 이용할 수 있습니다.
+              </p>
+
+              <!-- 모바일 설명 -->
+              <p class="benefit-banner-desc benefit-banner-desc-mobile">
+                59세가 되면 ‘59플러스’ 소속으로 자동 등록되며,<br>
+                원하는 멤버십을 선택하여 계속 이용할 수 있습니다.
+              </p>
+
+            </div>
+          </div>
+
+          <!-- INVITE -->
+          <div class="benefit-banner benefit-banner-invite">
+
+            <img src="./images/contents/pc/benefit-invite.png" alt="" class="benefit-banner-object">
+
+            <div class="benefit-banner-content">
+
+              <span class="benefit-banner-label">INVITE</span>
+
+              <h2 class="benefit-banner-title">
+                친구에게 <span class="benefit-banner-orange">추천</span>하면<br>
+                나도 친구도 아이코인
+              </h2>
+
+              <!-- PC 설명 -->
+              <p class="benefit-banner-desc benefit-banner-desc-pc">
+                초대 링크로 가입하면 두 사람 모두에게 아이코인이 적립됩니다.<br>
+                <strong>지금 친구에게 공유해보세요!</strong>
+              </p>
+
+              <!-- 모바일 설명 -->
+              <p class="benefit-banner-desc benefit-banner-desc-mobile">
+                지금 친구에게 <strong>공유해보세요!</strong>
+              </p>
+
+              <div class="benefit-share">
+
+                <!-- 카카오톡 -->
+                <button type="button" class="benefit-share-icon benefit-share-kakao" aria-label="카카오톡 공유">
+                  <img src="./images/contents/icon-kakao.png" alt="">
+                </button>
+
+                <!-- 인스타그램 -->
+                <button type="button" class="benefit-share-icon benefit-share-insta" aria-label="인스타그램 공유">
+                  <img src="./images/contents/icon-insta.png" alt="">
+                </button>
+
+                <!-- 링크 복사 -->
+                <button type="button" class="benefit-share-copy">
+                  링크 복사
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+     EXTRA BENEFIT - 추가 혜택
+========================= -->
+    <section class="extra-benefit">
+      <div class="extra-benefit-inner">
+
+        <div class="extra-benefit-heading">
+          <span class="extra-benefit-label">EXTRA BENEFIT</span>
+          <h2 class="extra-benefit-title">
+            추가 <span>혜택</span>
+          </h2>
+        </div>
+
+        <div class="extra-benefit-viewport">
+          <div class="extra-benefit-track">
+
+            <!-- 배너 01 -->
+            <div class="extra-benefit-slide">
+              <a href="https://www.ikozen.com/life/life_area_list.html?s_pid_no=B">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./images/contents/m/extra-banner-m-01.png">
+                  <img src="./images/contents/pc/extra-banner-pc-01.png"
+                    alt="스포츠 멤버십이라면 커피 2잔 무료! 6월부터 스포츠 멤버십 모든 등급 카페Ⅰ 쿠폰 월 2회 발급 가능!">
+                </picture>
+              </a>
+            </div>
+
+            <!-- 배너 02 -->
+            <div class="extra-benefit-slide">
+              <a href="https://www.ikozen.com/life/life_area_list.html?s_pid_no=B">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./images/contents/m/extra-banner-m-01.png">
+                  <img src="./images/contents/pc/extra-banner-pc-01.png"
+                    alt="스포츠 멤버십이라면 커피 2잔 무료! 6월부터 스포츠 멤버십 모든 등급 카페Ⅰ 쿠폰 월 2회 발급 가능!">
+                </picture>
+              </a>
+            </div>
+
+            <!-- 배너 03 -->
+            <div class="extra-benefit-slide">
+              <a href="https://www.ikozen.com/life/life_area_list.html?s_pid_no=B">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./images/contents/m/extra-banner-m-01.png">
+                  <img src="./images/contents/pc/extra-banner-pc-01.png"
+                    alt="스포츠 멤버십이라면 커피 2잔 무료! 6월부터 스포츠 멤버십 모든 등급 카페Ⅰ 쿠폰 월 2회 발급 가능!">
+                </picture>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+     FOOTER
+========================= -->
+  <footer class="site-footer">
+
+    <!-- 약관 및 정책 -->
+    <div class="footer-policy">
+      <div class="footer-policy-inner">
+        <a href="https://www.ikozen.com/intro/policy.html">이용약관</a>
+        <a href="https://www.ikozen.com/intro/provision.html">이용규정</a>
+        <a href="https://www.ikozen.com/intro/personal_policy.html">개인정보처리방침</a>
+        <!-- 개발팀 연동 필요: 기존 위치정보 설정 함수 -->
+        <a href="#">위치정보동의</a>
+        <!-- 개발팀 연동 필요: 기존 프로그램 다운로드 함수 -->
+        <a href="#" class="footer-pc-only">아이코젠관리자프로그램</a>
+        <a href="#" class="footer-pc-only">원격프로그램</a>
+      </div>
+    </div>
+
+    <div class="footer-inner">
+
+      <!-- 회사 정보 -->
+      <div class="footer-company">
+
+        <img src="./images/logo/logo-footer.png" alt="아이코젠" class="footer-logo">
+
+        <div class="footer-company-info">
+          <p>아이코젠 | 대표 김용남</p>
+          <p>경기도 용인시 기흥구 흥덕1로13 흥덕 IT밸리 A동 1707호</p>
+          <p>사업자등록번호 124-86-33252 | 통신판매업신고 2020-용인기흥-1208</p>
+          <p>대표번호 1588-7141 | 이메일 ikozen.info@gmail.com</p>
+          <p>팩스 031-233-5310 | 삼성전자·삼성전기 수원지점 031-210-5563</p>
+        </div>
+
+        <!-- PC 전용 앱 다운로드 -->
+        <div class="footer-apps">
+          <a href="https://play.google.com/store/apps/details?id=com.ikozen.ikozenmember&hl=ko" target="_blank"
+            rel="noopener noreferrer" aria-label="구글 플레이스토어">
+            <img src="./images/contents/pc/badge-google-play.png" alt="Google Play">
+          </a>
+
+          <a href="https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%EC%BD%94%EC%A0%A0/id1050845225?platform=ipad"
+            target="_blank" rel="noopener noreferrer" aria-label="애플 앱스토어">
+            <img src="./images/contents/pc/badge-app-store.png" alt="App Store">
+          </a>
+        </div>
+
+      </div>
+
+      <!-- 고객센터 -->
+      <div class="footer-cs">
+
+        <h3>고객센터</h3>
+
+        <div class="footer-cs-buttons">
+
+          <a href="https://pf.kakao.com/_jHynxd" target="_blank" rel="noopener noreferrer"
+            class="footer-cs-button footer-cs-kakao">
+            카카오톡 상담
+          </a>
+
+          <a href="https://www.ikozen.com/board/qna_list.html" class="footer-cs-button footer-cs-inquiry">
+            1:1문의
+          </a>
+
+          <a href="tel:15887141" class="footer-cs-button footer-cs-phone">
+            전화상담
+          </a>
+
+        </div>
+
+        <p class="footer-cs-hours">
+          평일 10:00 ~ 16:00 (점심시간 12:30 ~ 13:30)<br>
+          토, 일, 공휴일 휴무
+        </p>
+
+      </div>
+
+      <!-- 저작권 -->
+      <p class="footer-copyright">
+        Copyright By ikozen. All rights reserved
+      </p>
+
+    </div>
+  </footer>
+  <!-- =========================
+     FLOATING QUICK MENU
+========================= -->
+  <div class="floating-quick">
+
+    <div class="floating-capsule">
+
+      <!-- 카카오톡 상담 -->
+      <div class="floating-item floating-kakao">
+
+        <button type="button" class="floating-icon" data-floating="kakao" aria-label="카카오톡 상담" aria-expanded="false">
+          <img src="./images/contents/quick-kakao.png" alt="">
+          <span>카톡상담</span>
+        </button>
+
+        <!-- 카카오톡 안내 팝업 -->
+        <div class="floating-popup" id="floatingPopupKakao">
+
+          <button type="button" class="floating-popup-close" aria-label="닫기">×</button>
+
+          <strong>카카오톡 문의</strong>
+
+          <p>
+            카카오 채널로 빠르게 문의하세요.<br>
+            운영시간<br>
+            평일 10:00 ~ 16:00
+          </p>
+
+          <a href="https://pf.kakao.com/_jHynxd" target="_blank" rel="noopener noreferrer"
+            class="floating-popup-link floating-popup-kakao">
+            카카오 채널 바로가기
+          </a>
+
+        </div>
+      </div>
+
+      <!-- 1:1문의 -->
+      <div class="floating-item floating-inquiry">
+
+        <button type="button" class="floating-icon" data-floating="inquiry" aria-label="1:1문의" aria-expanded="false">
+          <img src="./images/contents/quick-inquiry.png" alt="">
+          <span>1:1문의</span>
+        </button>
+
+        <!-- 1:1문의 안내 팝업 -->
+        <div class="floating-popup" id="floatingPopupInquiry">
+
+          <button type="button" class="floating-popup-close" aria-label="닫기">×</button>
+
+          <strong>고객센터 안내</strong>
+
+          <p>1:1 문의로 빠르게 상담하세요.</p>
+
+          <a href="https://ikozen.com/board/qna_list.html" class="floating-popup-link floating-popup-inquiry">
+            1:1 문의
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TOP 버튼 -->
+    <button type="button" class="floating-top" aria-label="페이지 맨 위로 이동">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 20V4M5 11L12 4L19 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

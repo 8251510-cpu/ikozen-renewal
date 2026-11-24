@@ -1,0 +1,1342 @@
+@media (max-width: 768px) {
+
+  /* =========================
+   HEADER - MOBILE
+   기존 768px 미디어쿼리 내부
+========================= */
+
+  :root {
+    --header-height: 68px;
+    /* 임시값 */
+  }
+
+  /* 모바일 로고 크기 */
+  .site-logo img {
+    width: 45px;
+    height: auto;
+  }
+
+  .header-inner {
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 20px;
+    gap: 0;
+  }
+
+  .desktop-nav,
+  .desktop-account,
+  .mega-menu {
+    display: none !important;
+  }
+
+  /* 모바일 로고 */
+  .site-logo {
+    margin-right: auto;
+  }
+
+  .logo-symbol {
+    font-size: 38px;
+  }
+
+  .logo-text {
+    font-size: 10px;
+  }
+
+  /* 우측 아이콘 그룹: 피그마 92px */
+  .mobile-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92px;
+    height: 24px;
+    flex-shrink: 0;
+    gap: 0;
+  }
+
+  .mobile-search-btn,
+  .mobile-account-btn,
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .mobile-search-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  .mobile-account-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: #444;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .mobile-menu-btn span {
+    width: 23px;
+    height: 2px;
+    background: #444444;
+    border-radius: 1px;
+  }
+
+
+  /* 비로그인 상태 - 로그인 아이콘 */
+  .mobile-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: -10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-login-btn img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .mobile-logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: -10px;
+  }
+
+  .mobile-logout-btn svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #444444;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* 비로그인 상태 - 메뉴 상단 */
+  .mobile-guest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-guest-link {
+    display: inline-flex;
+    align-items: center;
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  /* 모바일 메뉴 */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 900;
+    background: #fff;
+    overflow-y: auto;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform .3s ease, visibility .3s;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: var(--header-height) 0 0;
+    z-index: 899;
+    background: rgba(0, 0, 0, .35);
+  }
+
+  .mobile-menu-overlay.open {
+    display: block;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* 회원 정보 */
+  .mobile-menu-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+  }
+
+  .mobile-user {
+    white-space: nowrap;
+  }
+
+  .mobile-user span {
+    color: #888;
+  }
+
+  .mobile-membership {
+    margin-left: auto;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .mobile-membership-link {
+    color: var(--primary);
+  }
+
+  .mobile-membership-divider {
+    color: #444;
+    margin: 0 3px;
+  }
+
+  .mobile-coin-link {
+    color: #212121;
+  }
+
+  .mobile-close-btn {
+    border: 0;
+    background: transparent;
+    font-size: 27px;
+    line-height: 1;
+    margin-left: auto;
+  }
+
+  /* 아코디언 메뉴 */
+  .mobile-nav {
+    padding: 0 20px;
+  }
+
+  .mobile-nav-group {
+    border-bottom: 1px solid #bbb;
+  }
+
+  .mobile-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 61px;
+    padding: 0 5px;
+    border: 0;
+    background: #fff;
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .menu-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* SVG 마스크 아이콘: 기본 주황색 */
+  .menu-icon {
+    display: inline-block;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--primary);
+    -webkit-mask: var(--menu-icon) center / contain no-repeat;
+    mask: var(--menu-icon) center / contain no-repeat;
+  }
+
+  .menu-icon-01 {
+    --menu-icon: url('../images/contents/m/menu-01.svg');
+  }
+
+  .menu-icon-02 {
+    --menu-icon: url('../images/contents/m/menu-02.svg');
+  }
+
+  .menu-icon-03 {
+    --menu-icon: url('../images/contents/m/menu-03.svg');
+  }
+
+  .menu-icon-04 {
+    --menu-icon: url('../images/contents/m/menu-04.svg');
+  }
+
+  .menu-icon-05 {
+    --menu-icon: url('../images/contents/m/menu-05.svg');
+  }
+
+  .menu-icon-06 {
+    --menu-icon: url('../images/contents/m/menu-06.svg');
+  }
+
+  .mobile-nav-title .arrow {
+    display: block;
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+
+    background-color: #444444;
+
+    -webkit-mask: url('../images/icons/arrow-down.svg') center / contain no-repeat;
+    mask: url('../images/icons/arrow-down.svg') center / contain no-repeat;
+
+    transition: transform .25s ease;
+  }
+
+  .mobile-nav-group.active .mobile-nav-title {
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    padding: 0 25px;
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .mobile-nav-group.active .menu-icon {
+    background-color: #fff;
+  }
+
+  .mobile-nav-group.active .arrow {
+    background-color: #ffffff;
+    transform: rotate(180deg);
+  }
+
+  /* 하위 메뉴 */
+  .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+  }
+
+  .mobile-nav-group.active .mobile-submenu {
+    max-height: 500px;
+  }
+
+  .mobile-submenu a {
+    display: block;
+    padding: 20px 33px;
+    border-bottom: 1px solid #bbb;
+    color: #777;
+    font-size: 15px;
+  }
+
+  .mobile-submenu a:last-child {
+    border-bottom: 0;
+  }
+
+  .mobile-submenu a:hover,
+  .mobile-submenu a:focus,
+  .mobile-submenu a.selected {
+    color: var(--primary);
+    background: #f5f5f5;
+  }
+
+
+  /* =========================
+   MAIN HERO - MOBILE
+========================= */
+
+  .hero {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 390 / 390;
+    overflow: hidden;
+  }
+
+
+  /* 모바일 가로 슬라이드 */
+
+  .hero-slide {
+    transform: translateX(100%);
+  }
+
+  .hero-slide.active {
+    transform: translateX(0);
+  }
+
+  .hero-slide.prev {
+    transform: translateX(-100%);
+  }
+
+
+  /* PC 배너 숨기기 */
+  .hero-pc {
+    display: none;
+  }
+
+  /* 모바일 배너 */
+  .hero-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-mobile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 모바일 페이지 버튼 */
+  .hero-pagination {
+    top: auto;
+    bottom: 18px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .hero-dot.active {
+    width: 18px;
+    height: 6px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  /* 모바일에서는 세로선 숨기기 */
+
+  .hero-dot::before,
+  .hero-dot::after {
+    display: none;
+  }
+
+  /* PC 검색창 숨기기 */
+  .hero-search-pc {
+    display: none;
+  }
+
+  /* 모바일 검색 영역 */
+  .mobile-search-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px;
+    background: #fff;
+  }
+
+  .mobile-hero-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .mobile-hero-search input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 14px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+  }
+
+  .mobile-hero-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 50px;
+
+    border: none;
+    border-radius: 14px;
+    background: var(--primary);
+    cursor: pointer;
+  }
+
+  .mobile-hero-search-btn svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  /* 이용신청 버튼 */
+  .mobile-apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+
+    border-radius: 12px;
+    background: var(--primary);
+
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+
+  /* =========================
+   QUICK MENU - MOBILE
+========================= */
+
+  .quick-menu {
+    padding: 0 0 16px;
+  }
+
+  /* PC 퀵메뉴 숨김 */
+  .quick-menu-pc {
+    display: none;
+  }
+
+  /* 모바일 퀵메뉴 5개 */
+  .quick-menu-mobile {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+
+  .quick-menu-item {
+    gap: 8px;
+  }
+
+  /* 모바일 원형 배경 */
+  .quick-menu-circle {
+    width: 54px;
+    height: 54px;
+  }
+
+  /* 모바일 아이콘 */
+  .quick-menu-circle img {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* 모바일 메뉴명 */
+  .quick-menu-text {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+   MEMBERSHIP - MOBILE
+========================= */
+
+  .membership {
+    padding: 35px 0 45px;
+
+    background: linear-gradient(to bottom,
+        #fff 0%,
+        #fff 48%,
+        #f5f7f1 48%,
+        #f5f7f1 100%);
+  }
+
+  .membership-inner {
+    width: calc(100% - 44px);
+  }
+
+  /* 제목 */
+  .membership-heading {
+    margin-bottom: 20px;
+  }
+
+  .membership-label {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .membership-heading h2 {
+    margin: 0;
+    font-size: 27px;
+    line-height: 1.3;
+    letter-spacing: -.8px;
+  }
+
+  /* 설명 숨김 */
+  .membership-description {
+    display: none;
+  }
+
+  /* 카드 세로 4개 */
+  .membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* 카드 */
+  .membership-card {
+    min-height: 113px;
+    padding: 20px 22px;
+    border-radius: 16px;
+    box-shadow: none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .membership-type {
+    margin-bottom: 5px;
+  }
+
+  .membership-type strong {
+    font-size: 15px;
+  }
+
+  .membership-type span {
+    font-size: 15px;
+  }
+
+  .membership-card h3 {
+    margin-bottom: 9px;
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+  }
+
+  /* PC용 설명과 혜택 숨김 */
+  .membership-subtitle,
+  .membership-benefits-pc,
+  .premium-pc {
+    display: none;
+  }
+
+  /* 모바일 혜택 한 줄 */
+  .membership-benefit-mobile {
+    position: relative;
+    display: block;
+
+    margin: 0;
+    padding-left: 20px;
+
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .membership-benefit-mobile::before {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: var(--card-color);
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  /* 모바일 프리미엄 가격 */
+  .premium-mobile {
+    display: inline;
+  }
+
+  /* 모바일 원형 화살표 */
+  .membership-detail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 26px;
+    height: 26px;
+    margin: 0;
+
+    border-radius: 50%;
+    background: var(--card-color);
+  }
+
+  .membership-detail-text {
+    display: none;
+  }
+
+  .membership-detail-arrow {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+
+  /* =========================
+   RECOMMEND - MOBILE
+========================= */
+
+  .recommend {
+    padding: 35px 0 60px;
+  }
+
+  .recommend-inner {
+    width: calc(100% - 44px);
+  }
+
+  .recommend-heading {
+    margin-bottom: 22px;
+  }
+
+  .recommend-label {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  .recommend-heading h2 {
+    margin-bottom: 0;
+    font-size: 27px;
+  }
+
+  .recommend-heading p {
+    display: none;
+  }
+
+  /* 모바일 좌우 버튼 */
+  .recommend-controls {
+    gap: 8px;
+    padding-bottom: 2px;
+  }
+
+  .recommend-controls button {
+    width: 26px;
+    height: 26px;
+  }
+
+  .recommend-arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 모바일 2개 노출 */
+  .recommend-track {
+    gap: 10px;
+  }
+
+  .recommend-card {
+    flex: 0 0 calc((100% - 10px) / 2);
+    border-radius: 14px;
+  }
+
+  .recommend-image {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .recommend-category {
+    left: 8px;
+    bottom: 8px;
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .recommend-info {
+    padding: 12px 10px 15px;
+  }
+
+  .recommend-info strong {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .recommend-info p {
+    font-size: 12px;
+  }
+
+  /* =========================
+   PARTNERS - MOBILE
+========================= */
+
+  .partners {
+    padding: 45px 0 60px;
+  }
+
+  .partners-inner {
+    width: calc(100% - 44px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .partners-content {
+    width: 100%;
+  }
+
+  .partners-label {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  .partners-title {
+    font-size: 27px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+
+  .partners-title span {
+    display: none;
+  }
+
+  .partners-description {
+    display: none;
+  }
+
+  .partners-categories {
+    flex: none;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+
+  .partners-category {
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 4px;
+    border-radius: 12px;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+  }
+
+  .partners-category::before {
+    display: none;
+  }
+
+  /* 모바일 카테고리 순서 */
+  .partners-category:nth-child(1) {
+    order: 1;
+  }
+
+  .partners-category:nth-child(2) {
+    order: 5;
+  }
+
+  .partners-category:nth-child(3) {
+    order: 4;
+  }
+
+  .partners-category:nth-child(4) {
+    order: 6;
+  }
+
+  .partners-category:nth-child(5) {
+    order: 2;
+  }
+
+  .partners-category:nth-child(6) {
+    order: 3;
+  }
+
+  .partners-category:nth-child(7) {
+    order: 7;
+  }
+
+  .partners-category:nth-child(8) {
+    order: 9;
+  }
+
+  .partners-category:nth-child(9) {
+    order: 10;
+  }
+
+  .partners-category:nth-child(10) {
+    order: 11;
+  }
+
+  .partners-category:nth-child(11) {
+    order: 8;
+  }
+
+  .partners-category:nth-child(12) {
+    order: 12;
+  }
+
+  .partners-button {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 0;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    position: relative;
+  }
+
+  .partners-button-arrow {
+    display: block;
+    position: absolute;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  /* 모바일에서는 카테고리 아래에 버튼 배치 */
+  .partners-inner {
+    position: relative;
+  }
+
+  .partners-content {
+    display: contents;
+  }
+
+  .partners-label,
+  .partners-title {
+    order: 1;
+  }
+
+  .partners-categories {
+    order: 2;
+  }
+
+  .partners-button {
+    order: 3;
+  }
+
+  .partners-categories-pc {
+    display: none;
+  }
+
+  .partners-categories-mobile {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+   BENEFIT - MOBILE
+========================= */
+
+  .benefit {
+    padding: 60px 0 40px;
+  }
+
+  .benefit-inner {
+    width: calc(100% - 44px);
+  }
+
+  .benefit-heading {
+    margin-bottom: 20px;
+  }
+
+  .benefit-label {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  .benefit-title {
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .benefit-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .benefit-event {
+    display: none;
+  }
+
+  .benefit-card {
+    min-height: 165px;
+    padding: 16px 16px 30px;
+    border-radius: 20px;
+    align-items: flex-end;
+  }
+
+  .benefit-card h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .benefit-card p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .benefit-desc-pc {
+    display: none;
+  }
+
+  .benefit-desc-mobile {
+    display: block;
+  }
+
+  /* =========================
+   59 PLUS / INVITE - MOBILE
+========================= */
+
+  .benefit-extra {
+    padding: 0 0 60px;
+  }
+
+  .benefit-extra-inner {
+    width: calc(100% - 44px);
+  }
+
+  .benefit-banners {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 배너 */
+  .benefit-banner {
+    min-height: auto;
+    padding: 35px 28px;
+    border-radius: 24px;
+  }
+
+  /* 모바일에서는 장식 이미지 숨김 */
+  .benefit-banner-object {
+    display: none;
+  }
+
+  /* 라벨 */
+  .benefit-banner-label {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  /* 제목 */
+  .benefit-banner-title {
+    margin-bottom: 12px;
+    font-size: 27px;
+    line-height: 1.25;
+  }
+
+  /* 설명 */
+  .benefit-banner-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .benefit-banner-desc-pc {
+    display: none;
+  }
+
+  .benefit-banner-desc-mobile {
+    display: block;
+  }
+
+  /* 공유 버튼 */
+  .benefit-share {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .benefit-share-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefit-share-copy {
+    min-height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  /* =========================
+   EXTRA BENEFIT - MOBILE
+========================= */
+
+  .extra-benefit {
+    padding: 0 0 60px;
+  }
+
+  .extra-benefit-inner {
+    width: calc(100% - 44px);
+  }
+
+  .extra-benefit-heading {
+    margin-bottom: 30px;
+  }
+
+  .extra-benefit-label {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .extra-benefit-title {
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .extra-benefit-viewport {
+    border-radius: 20px;
+  }
+
+  .extra-benefit-pagination {
+    margin-top: 15px;
+  }
+
+  /* =========================
+   FOOTER - MOBILE
+========================= */
+
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    background: #f5f7f1;
+  }
+
+  /* 약관 메뉴를 맨 아래로 이동 */
+  .footer-policy {
+    order: 2;
+    overflow: hidden;
+  }
+
+  .footer-policy-inner {
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 42px;
+    padding: 0 22px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .footer-policy-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer-policy a {
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+
+  .footer-policy a+a::before {
+    height: 12px;
+    margin: 0 14px;
+  }
+
+  /* 본문 */
+  .footer-inner {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 44px);
+    min-height: auto;
+    padding: 35px 0 30px;
+  }
+
+  .footer-company {
+    padding: 0;
+  }
+
+  .footer-logo {
+    width: 110px;
+    margin-bottom: 20px;
+  }
+
+  .footer-company-info p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* 모바일 앱 배지 숨김 */
+  .footer-apps {
+    display: none;
+  }
+
+  /* 고객센터 */
+  .footer-cs {
+    padding: 0;
+    margin-top: 24px;
+    border-left: 0;
+  }
+
+  .footer-cs h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+
+  .footer-cs-hours {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* 모바일에서는 상담 시간 다음에 버튼 배치 */
+  .footer-cs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-cs h3 {
+    order: 1;
+  }
+
+  .footer-cs-hours {
+    order: 2;
+  }
+
+  .footer-cs-buttons {
+    order: 3;
+    gap: 6px;
+    margin: 14px 0 0;
+  }
+
+  .footer-cs-button {
+    min-height: 42px;
+    padding: 0 17px;
+    font-size: 14px;
+  }
+
+  /* 모바일 카카오톡 버튼 */
+  .footer-cs-kakao {
+    background: #ff642d;
+    border-color: #ff642d;
+    color: #fff;
+  }
+
+  /* 모바일 전화상담 표시 */
+  .footer-cs-phone {
+    display: inline-flex;
+  }
+
+  /* 저작권 */
+  .footer-copyright {
+    position: static;
+    margin-top: 25px;
+    font-size: 13px;
+  }
+
+  /* =========================
+   FLOATING QUICK MENU - MOBILE
+========================= */
+
+  /* 플로팅 메뉴 위치 */
+  .floating-quick {
+    right: 22px;
+    bottom: 30px;
+    gap: 6px;
+  }
+
+  /* 상담 메뉴 캡슐 */
+  .floating-capsule {
+    width: 60px;
+    padding: 14px 5px;
+    border-radius: 35px;
+  }
+
+  /* 가운데 구분선 */
+  .floating-inquiry {
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  /* 상담 버튼 */
+  .floating-icon {
+    min-height: 44px;
+    gap: 4px;
+  }
+
+  /* 상담 아이콘 이미지 */
+  .floating-icon img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* 상담 버튼 텍스트 */
+  .floating-icon span {
+    font-size: 10px;
+  }
+
+  /* 모바일에서는 팝업 숨김 */
+  .floating-popup {
+    display: none;
+  }
+
+  /* TOP 버튼 */
+  .floating-top {
+    width: 60px;
+    height: 60px;
+  }
+
+  .floating-top svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .desktop-member {
+    display: none;
+  }
+
+  /* 모바일 배너 스와이프 */
+  .hero-slider {
+    touch-action: pan-y;
+  }
+
+  /* PC 전용 프로그램 다운로드 링크 숨김 */
+  .footer-pc-only {
+    display: none !important;
+  }
+
+  /* 모바일 미디어쿼리 종료 */
+}

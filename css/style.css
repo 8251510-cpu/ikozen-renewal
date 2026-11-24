@@ -1,0 +1,1903 @@
+/* Pretendard 웹폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+/* 홈페이지 전체 폰트 */
+body {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+}
+
+/* 버튼 및 입력창에도 동일한 폰트 적용 */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* =========================
+   HEADER - PC
+========================= */
+
+
+:root {
+  --primary: #ff6a2b;
+  --text: #212121;
+
+  --header-height: 80px;
+  --content-width: 1150px;
+
+  --menu-width: 800px;
+  --menu-height: 250px;
+  --menu-padding: 16px;
+}
+
+/* =========================
+   헤더 기본 구조
+========================= */
+
+.site-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  width: min(var(--content-width), calc(100% - 40px));
+  height: var(--header-height);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+
+
+/* =========================
+   HEADER LOGO
+========================= */
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.site-logo img {
+  display: block;
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================
+   PC 상단 대메뉴
+========================= */
+
+.desktop-nav {
+  position: relative;
+  left: -20px;
+
+  width: var(--menu-width);
+  height: 100%;
+  flex: 0 0 var(--menu-width);
+}
+
+/* 6개 메뉴 공통 그리드 */
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  height: 100%;
+  min-width: 0;
+}
+
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 10px 0 0;
+  box-sizing: border-box;
+
+  border-bottom: 2px solid transparent;
+
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition:
+    color .2s ease,
+    border-color .2s ease;
+}
+
+
+/* =========================
+   PC 전체 드롭다운
+========================= */
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: auto;
+
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .06);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    visibility .25s ease;
+
+  pointer-events: none;
+
+  top: calc(100% + 1px);
+  z-index: 2;
+}
+
+.mega-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 드롭다운 6열 */
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  width: 100%;
+  height: auto;
+
+  padding: 18px 0 25px;
+  box-sizing: border-box;
+}
+
+/* 각 하위메뉴 열 */
+.mega-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  padding: 0 18px;
+
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.mega-column:last-child {
+  border-right: none;
+}
+
+/* 하위메뉴 텍스트 */
+
+.mega-column a {
+  display: block;
+  width: 100%;
+
+  /* 소메뉴 위아래 간격 */
+  padding: 11px 0;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+
+  transition: color .2s ease;
+}
+
+.mega-column a:hover {
+  color: var(--primary);
+}
+
+
+/* =========================
+   PC 로그인 / 회원가입
+========================= */
+
+.desktop-account {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  flex-shrink: 0;
+  margin-left: auto;
+
+  /* 로그인·회원가입 버튼 위치 조정 */
+  padding-top: 8px;
+  box-sizing: border-box;
+}
+
+.desktop-account a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 85px;
+  height: 36px;
+  padding: 0 15px;
+
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn {
+  border: 1px solid #777;
+  background: #fff;
+  color: #333;
+}
+
+.join-btn {
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+/* =========================
+   PC HEADER - 로그인 상태
+========================= */
+
+.desktop-member {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  white-space: nowrap;
+  transform: translateY(4px);
+}
+
+/* 회원 이름 */
+.desktop-member-name {
+  color: #212121;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 멤버십 정보 */
+.desktop-member-type {
+  color: #777;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* 로그아웃 버튼 */
+.desktop-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.desktop-logout-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #444444;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* 활성화된 대메뉴의 주황색 선 */
+.nav-list li {
+  position: relative;
+}
+
+.nav-list a {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* 메가메뉴 배경 오버레이 */
+.mega-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mega-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 헤더 및 메가메뉴를 오버레이 위에 표시 */
+.site-header {
+  position: relative;
+  z-index: 901;
+}
+
+/* =========================
+   MAIN HERO - PC
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #eee;
+}
+
+/* 슬라이더 */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* PC 세로 슬라이드 */
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-100%);
+
+  transition: transform .7s ease;
+}
+
+.hero-slide.active {
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.hero-slide.prev {
+  transform: translateY(100%);
+  z-index: 1;
+}
+
+
+/* PC 배너 */
+.hero-pc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 배너 글씨 이미지 */
+.hero-copy {
+  position: absolute;
+  top: 20%;
+  left: max(calc((100% - 1150px) / 2),
+      20px);
+  width: 460px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 모바일 배너 숨기기 */
+.hero-mobile {
+  display: none;
+}
+
+/* =========================
+   PC 슬라이드 페이지 버튼
+========================= */
+
+.hero-pagination {
+  position: absolute;
+  top: 50%;
+  right: max(calc((100% - 1150px) / 2), 30px);
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  z-index: 5;
+}
+
+/* 기본 도트 */
+.hero-dot {
+  position: relative;
+
+  width: 9px;
+  height: 9px;
+  padding: 0;
+
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #fff;
+
+  cursor: pointer;
+}
+
+/* 활성화 도트 */
+.hero-dot.active {
+  width: 12px;
+  height: 12px;
+
+  border: 2px solid #fff;
+  background: var(--primary);
+}
+
+/* 도트 사이 흰색 세로선 */
+.hero-dot:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1px;
+  height: 38px;
+  background: #fff;
+
+  pointer-events: none;
+}
+
+.hero-dot:first-child::before {
+  content: "";
+  position: absolute;
+
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1px;
+  height: 38px;
+  background: #fff;
+
+}
+
+.hero-dot:last-child::after {
+  content: "";
+  position: absolute;
+
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1px;
+  height: 38px;
+  background: #fff;
+}
+
+
+/* =========================
+   PC 검색창
+========================= */
+
+.hero-search-pc {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1150px, calc(100% - 40px));
+  z-index: 6;
+}
+
+.hero-search-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  height: 68px;
+  padding: 8px;
+
+  background: #fff;
+  border-radius: 40px;
+}
+
+.hero-search-input {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  padding: 0 20px;
+
+  border: 1px solid #ddd;
+  border-radius: 30px;
+}
+
+.hero-search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+}
+
+.search-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  right: -5px;
+  bottom: -3px;
+  background: var(--primary);
+  transform: rotate(45deg);
+}
+
+.hero-search-btn {
+  flex: 0 0 180px;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+
+  background: var(--primary);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* PC에서는 모바일 검색 숨김 */
+.mobile-search-area {
+  display: none;
+}
+
+
+/* =========================
+   QUICK MENU - PC
+========================= */
+
+.quick-menu {
+  width: 100%;
+  padding: 36px 0 36px;
+  background: #fff;
+}
+
+.quick-menu-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* PC 퀵메뉴 8개 */
+.quick-menu-pc {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0;
+}
+
+/* PC에서는 모바일 퀵메뉴 숨김 */
+.quick-menu-mobile {
+  display: none;
+}
+
+/* 아이콘 + 텍스트 전체 링크 */
+.quick-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  color: #212121;
+  text-decoration: none;
+}
+
+/* 원형 배경 */
+.quick-menu-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #f6f6f9;
+
+  transition: transform .2s ease;
+}
+
+/* 아이콘 이미지 */
+.quick-menu-circle img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* 메뉴명 */
+.quick-menu-text {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* 마우스 호버 */
+.quick-menu-item:hover .quick-menu-circle {
+  transform: translateY(-4px);
+}
+
+.quick-menu-item:hover .quick-menu-text {
+  color: var(--primary);
+}
+
+/* =========================
+   MEMBERSHIP - PC
+========================= */
+
+.membership {
+  width: 100%;
+  padding: 55px 0 65px;
+
+  background: linear-gradient(to bottom,
+      #fff 0%,
+      #fff 60%,
+      #f5f7f1 60%,
+      #f5f7f1 100%);
+}
+
+.membership-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* 제목 */
+.membership-heading {
+  margin-bottom: 40px;
+}
+
+.membership-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.membership-heading h2 {
+  margin: 0 0 12px;
+
+  color: #212121;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+
+.membership-heading h2 em {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.membership-description {
+  margin: 0;
+
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 카드 4개 */
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* 카드 공통 */
+.membership-card {
+  --card-color: #ff6a2b;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 320px;
+  padding: 30px 28px;
+
+  border: 1px solid var(--card-color);
+  border-radius: 18px;
+  background: #fff;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .12);
+}
+
+.membership-sport {
+  --card-color: #ff6a2b;
+}
+
+.membership-life {
+  --card-color: #708b67;
+}
+
+.membership-premium {
+  --card-color: #9b70bd;
+}
+
+.membership-coin {
+  --card-color: #d99b41;
+}
+
+/* 카드 카테고리 */
+.membership-type {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.membership-type strong {
+  color: var(--card-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.membership-type span {
+  color: #888;
+  font-size: 15px;
+}
+
+/* 가격 */
+.membership-card h3 {
+  margin: 0 0 5px;
+
+  color: var(--card-color);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -.6px;
+}
+
+.membership-subtitle {
+  margin: 10px 0 20px;
+
+  color: #212121;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* PC 혜택 */
+.membership-benefits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.membership-benefits li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 10px;
+
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.membership-benefits li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: var(--card-color);
+  font-weight: 700;
+}
+
+/* 모바일 전용 내용 숨김 */
+.membership-benefit-mobile,
+.premium-mobile {
+  display: none;
+}
+
+/* 자세히보기 버튼 */
+.membership-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 40px;
+  margin-top: 22px;
+
+  border-radius: 30px;
+  background: var(--card-color);
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: opacity .2s ease;
+}
+
+.membership-detail:hover {
+  opacity: .85;
+}
+
+.membership-detail-arrow {
+  display: none;
+}
+
+/* 접근성용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* =========================
+   RECOMMEND - PC
+========================= */
+
+.recommend {
+  width: 100%;
+  padding: 35px 0 80px;
+  background: #f5f7f1;
+}
+
+.recommend-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.recommend-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.recommend-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #708b67;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.recommend-heading h2 {
+  margin: 0 0 10px;
+  color: #212121;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.recommend-heading p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+
+/* 좌우 버튼 */
+.recommend-controls {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 4px;
+}
+
+.recommend-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.recommend-arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #444444;
+
+  -webkit-mask: url('../images/icons/arrow-down.svg') center / contain no-repeat;
+  mask: url('../images/icons/arrow-down.svg') center / contain no-repeat;
+}
+
+.recommend-prev .recommend-arrow {
+  transform: rotate(90deg);
+}
+
+.recommend-next .recommend-arrow {
+  transform: rotate(-90deg);
+}
+
+.recommend-controls button:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+/* 슬라이드 */
+.recommend-viewport {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.recommend-track {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  gap: 16px;
+  transition: transform .5s ease;
+  will-change: transform;
+}
+
+/* PC 카드 4개 */
+.recommend-card {
+  flex: 0 0 calc((100% - 48px) / 4);
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .08);
+  color: #212121;
+}
+
+/* 시설 이미지 */
+.recommend-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+}
+
+.recommend-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.recommend-card:hover .recommend-image img {
+  transform: scale(1.04);
+}
+
+/* 카테고리 배지 */
+.recommend-category {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #fff;
+  color: #ff6a2b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* 시설 정보 */
+.recommend-info {
+  padding: 16px 14px 18px;
+}
+
+.recommend-info strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.recommend-info p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* =========================
+   PARTNERS - PC
+========================= */
+
+.partners {
+  width: 100%;
+  background: #f7f0e8;
+  padding: 90px 0;
+}
+
+.partners-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.partners-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.partners-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff642d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.partners-title {
+  margin: 0;
+  color: #222;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  word-break: keep-all;
+}
+
+.partners-title span {
+  display: block;
+  color: #ff642d;
+}
+
+.partners-description {
+  margin-top: 14px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.partners-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: #ff642d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.partners-button:hover {
+  background: #e95320;
+}
+
+.partners-button-arrow {
+  display: none;
+}
+
+.partners-categories {
+  flex: 0 0 580px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.partners-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.partners-category::before {
+  content: "";
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff642d;
+}
+
+.partners-category-purple::before {
+  background: #974de0;
+}
+
+.partners-categories-mobile {
+  display: none;
+}
+
+/* =========================
+   BENEFIT - PC
+========================= */
+
+.benefit {
+  width: 100%;
+  padding: 80px 0 80px;
+  background: #fff;
+}
+
+.benefit-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.benefit-heading {
+  margin-bottom: 24px;
+}
+
+.benefit-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff642d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.benefit-title {
+  margin: 0;
+  color: #222;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.benefit-title span {
+  color: #ff642d;
+}
+
+.benefit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 180px;
+  padding: 30px;
+  border-radius: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-event {
+  background: #ff642d;
+}
+
+.benefit-culture {
+  background: #708b67;
+}
+
+.benefit-play {
+  background: #9b70bd;
+}
+
+.benefit-card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+/* =========================
+   59 PLUS / INVITE - PC
+========================= */
+
+.benefit-extra {
+  width: 100%;
+  padding: 0 0 30px;
+  background: #fff;
+}
+
+.benefit-extra-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.benefit-banners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* 배너 공통 */
+.benefit-banner {
+  position: relative;
+  min-width: 0;
+  min-height: 270px;
+  padding: 30px 35px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.benefit-banner-59 {
+  background: #f5f7f1;
+}
+
+.benefit-banner-invite {
+  background: #fff8f4;
+}
+
+.benefit-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* 상단 라벨 */
+.benefit-banner-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.benefit-banner-59 .benefit-banner-label {
+  color: #708b67;
+}
+
+.benefit-banner-invite .benefit-banner-label {
+  color: #ff642d;
+}
+
+/* 제목 */
+.benefit-banner-title {
+  margin: 0 0 18px;
+  color: #222;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.benefit-banner-green {
+  color: #708b67;
+}
+
+.benefit-banner-orange {
+  color: #ff642d;
+}
+
+/* 설명 */
+.benefit-banner-desc {
+  margin: 0;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.benefit-banner-desc strong {
+  color: #ff642d;
+  font-weight: 600;
+}
+
+/* PC에서는 모바일 설명 숨김 */
+.benefit-banner-desc-mobile {
+  display: none;
+}
+
+/* 우측 상단 이미지 */
+.benefit-banner-object {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 120px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 59 PLUS 이미지 크기 */
+.benefit-banner-59 .benefit-banner-object {
+  width: 150px;
+}
+
+/* 공유 버튼 영역 */
+.benefit-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.benefit-share-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.benefit-share-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.benefit-share-copy {
+  min-height: 44px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 30px;
+  background: #ff642d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.benefit-share-copy:hover {
+  background: #e95320;
+}
+
+/* 모바일 전용 설명 숨김 */
+.benefit-desc-mobile {
+  display: none;
+}
+
+/* =========================
+   EXTRA BENEFIT - PC
+========================= */
+
+.extra-benefit {
+  width: 100%;
+  padding: 60px 0 90px;
+  background: #fff;
+}
+
+.extra-benefit-inner {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* 제목 */
+.extra-benefit-heading {
+  margin-bottom: 30px;
+}
+
+.extra-benefit-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff642d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.extra-benefit-title {
+  margin: 0;
+  color: #222;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.extra-benefit-title span {
+  color: #ff642d;
+}
+
+/* 슬라이더 */
+.extra-benefit-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.extra-benefit-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+.extra-benefit-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.extra-benefit-slide picture,
+.extra-benefit-slide img {
+  display: block;
+  width: 100%;
+}
+
+.extra-benefit-slide img {
+  height: auto;
+}
+
+/* =========================
+   FOOTER - PC
+========================= */
+
+.site-footer {
+  width: 100%;
+  background: #fff;
+  color: #777;
+}
+
+/* 상단 약관 영역 */
+.footer-policy {
+  width: 100%;
+  background: #f0f4ea;
+}
+
+.footer-policy-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: min(1150px, calc(100% - 40px));
+  min-height: 44px;
+  margin: 0 auto;
+}
+
+.footer-policy a {
+  display: inline-flex;
+  align-items: center;
+  color: #708b67;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-policy a+a::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  margin: 0 16px;
+  background: #9da994;
+}
+
+.footer-policy a:hover {
+  text-decoration: underline;
+}
+
+/* 푸터 본문 */
+.footer-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(1150px, calc(100% - 40px));
+  min-height: 270px;
+  margin: 0 auto;
+  padding: 30px 0 45px;
+}
+
+.footer-company {
+  padding-right: 40px;
+}
+
+.footer-logo {
+  display: block;
+  width: 105px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.footer-company-info p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* 앱 다운로드 */
+.footer-apps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.footer-apps a,
+.footer-apps img {
+  display: block;
+}
+
+.footer-apps img {
+  width: auto;
+  height: 30px;
+}
+
+/* 고객센터 */
+.footer-cs {
+  padding: 10px 0 0 90px;
+  border-left: 1px solid #ddd;
+}
+
+.footer-cs h3 {
+  margin: 0 0 12px;
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-cs-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-cs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid #9f8d8d;
+  border-radius: 30px;
+  background: #fff;
+  color: #7c6b6b;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-cs-button:hover {
+  background: #ff642d;
+  border-color: #ff642d;
+  color: #fff;
+}
+
+/* PC에서는 전화상담 숨김 */
+.footer-cs-phone {
+  display: none;
+}
+
+.footer-cs-hours {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 저작권 */
+.footer-copyright {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* =========================
+   FLOATING QUICK MENU - PC
+========================= */
+
+/* 플로팅 메뉴 전체 */
+.floating-quick {
+  position: fixed;
+  right: 24px;
+  bottom: 40px;
+  z-index: 890;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 상담 메뉴 캡슐 */
+.floating-capsule {
+  box-sizing: border-box;
+  width: 68px;
+  padding: 16px 7px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 개별 상담 메뉴 */
+.floating-item {
+  position: relative;
+  width: 100%;
+}
+
+/* 가운데 구분선 */
+.floating-inquiry {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* 상담 버튼 */
+.floating-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* 상담 아이콘 이미지 */
+.floating-icon img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* 상담 버튼 텍스트 */
+.floating-icon span {
+  color: #222;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.floating-icon:hover span {
+  color: #ff642d;
+}
+
+
+/* =========================
+   상담 안내 팝업
+========================= */
+
+.floating-popup {
+  position: absolute;
+  right: calc(100% + 22px);
+  bottom: 0;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 18px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+/* 팝업 활성화 */
+.floating-popup.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* 말풍선 꼬리 */
+.floating-popup::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: 18px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+/* 팝업 제목 */
+.floating-popup strong {
+  display: block;
+  margin-bottom: 8px;
+  padding-right: 18px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 팝업 설명 */
+.floating-popup p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 팝업 닫기 버튼 */
+.floating-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* 팝업 링크 버튼 */
+.floating-popup-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 카카오톡 링크 */
+.floating-popup-kakao {
+  background: #ffe500;
+  color: #222;
+}
+
+/* 1:1문의 링크 */
+.floating-popup-inquiry {
+  background: #222;
+  color: #fff;
+}
+
+
+/* =========================
+   TOP 버튼
+========================= */
+
+.floating-top {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+  color: #ff642d;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.floating-top svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.floating-top:hover {
+  background: #fff5ef;
+}
+
+/* =========================
+   SLIDER DRAG / SWIPE
+========================= */
+
+.hero-slider,
+.recommend-viewport,
+.extra-benefit-viewport {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hero-slider.is-dragging,
+.recommend-viewport.is-dragging,
+.extra-benefit-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.hero-slider img,
+.recommend-viewport img,
+.extra-benefit-viewport img {
+  -webkit-user-drag: none;
+}
+
+.recommend-viewport,
+.extra-benefit-viewport {
+  touch-action: pan-y;
+}
+
+/* =========================
+   PC에서 모바일 요소 숨김
+========================= */
+
+.mobile-header-actions,
+.mobile-menu,
+.mobile-menu-overlay {
+  display: none;
+}
