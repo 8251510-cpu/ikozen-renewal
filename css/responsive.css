@@ -544,7 +544,7 @@
 ========================= */
 
   .quick-menu {
-    padding: 0 0 16px;
+    padding: 10px 0 15px;
   }
 
   /* PC 퀵메뉴 숨김 */
@@ -590,7 +590,7 @@
 ========================= */
 
   .membership {
-    padding: 35px 0 45px;
+    padding: 25px 0 30px;
 
     background: linear-gradient(to bottom,
         #fff 0%,
@@ -733,7 +733,7 @@
 ========================= */
 
   .recommend {
-    padding: 35px 0 60px;
+    padding: 15px 0 40px;
   }
 
   .recommend-inner {
@@ -813,7 +813,7 @@
 ========================= */
 
   .partners {
-    padding: 45px 0 60px;
+    padding: 35px 0 40px;
   }
 
   .partners-inner {
@@ -975,7 +975,7 @@
 ========================= */
 
   .benefit {
-    padding: 60px 0 40px;
+    padding: 40px 0 25px;
   }
 
   .benefit-inner {
@@ -1013,12 +1013,12 @@
   }
 
   .benefit-card h3 {
-    margin-bottom: 8px;
-    font-size: 24px;
+    margin-bottom: 6px;
+    font-size: 22px;
   }
 
   .benefit-card p {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.4;
   }
 
@@ -1035,7 +1035,7 @@
 ========================= */
 
   .benefit-extra {
-    padding: 0 0 60px;
+    padding: 0 0 40px;
   }
 
   .benefit-extra-inner {
@@ -1044,7 +1044,7 @@
 
   .benefit-banners {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 13px;
   }
 
   /* 배너 */
@@ -1108,7 +1108,7 @@
 ========================= */
 
   .extra-benefit {
-    padding: 0 0 60px;
+    padding: 0 0 40px;
   }
 
   .extra-benefit-inner {
